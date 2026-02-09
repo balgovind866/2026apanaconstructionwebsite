@@ -193,7 +193,7 @@ ul {
   position: relative;
   overflow: hidden;
   padding: 0;
-  height: 600px;
+  height: 500px;
 }
 
 .hero-slider {
@@ -211,7 +211,7 @@ ul {
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -238,13 +238,20 @@ ul {
   position: relative;
   z-index: 2;
   text-align: center;
+  /* Centered Text */
   max-width: 800px;
   color: var(--white);
   padding: 0 20px;
+  margin: 0 auto;
+  /* Center in container */
+  /* Shift slightly left on desktop to balance form if needed, or keep centered */
+  /* For purely centered text over the image as requested: */
+  left: -150px;
+  /* Offset to left to make room for form on right */
 }
 
 .hero-content h1 {
-  font-size: 52px;
+  font-size: 48px;
   font-weight: 900;
   margin-bottom: 20px;
   line-height: 1.1;
@@ -257,10 +264,95 @@ ul {
 }
 
 .hero-content p {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 30px;
   color: var(--white);
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  max-width: 100%;
+}
+
+/* ... existing hero-rate / hero-actions styles ... */
+
+/* Hero Form Overlay */
+.hero-form-container {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  width: 320px;
+  /* Smaller width */
+  background: rgba(255, 255, 255, 0.2);
+  /* Transparent background */
+  padding: 20px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  /* Glassmorphism effect */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  z-index: 10;
+}
+
+.hero-form h3 {
+  margin-bottom: 15px;
+  color: var(--white);
+  /* White text for contrast on dark bg */
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 4px;
+  font-weight: 600;
+  color: var(--white);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  /* Visible fields */
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  transition: var(--transition);
+  color: #333;
+}
+
+.form-group input:focus {
+  background: #fff;
+  border-color: var(--secondary-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(232, 93, 4, 0.2);
+}
+
+.submit-btn {
+  width: 100%;
+  background: var(--secondary-color);
+  color: var(--white);
+  padding: 10px;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 15px;
+  margin-top: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn:hover {
+  background: #d45500;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .hero-rate {
@@ -658,9 +750,74 @@ ul {
     gap: 4px;
   }
 
+  /* Responsive Hero Form */
+  .hero {
+    height: auto;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-slider {
+    position: relative;
+    height: 400px;
+    width: 100%;
+  }
+
+  .hero-content {
+    text-align: center;
+    padding: 0 20px;
+    margin: 0 auto;
+    max-width: 100%;
+    left: 0;
+    transform: none;
+  }
+
   .hero-content h1 {
     font-size: 32px;
   }
+
+  .hero-form-container {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    width: 85%;
+    /* Slightly narrower */
+    max-width: 350px;
+    /* Limit width */
+    margin: 5px auto 20px;
+    /* Less overlap */
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    /* Reduced padding */
+    border-radius: var(--radius-md);
+  }
+
+  .hero-form h3 {
+    font-size: 18px;
+    /* Smaller title */
+    color: var(--primary-color);
+    /* Dark text on mobile for readability */
+    margin-bottom: 12px;
+  }
+
+  .form-group label {
+    color: var(--text-muted);
+    /* Dark text on mobile */
+  }
+
+  .form-group input {
+    padding: 8px 12px;
+    /* Smaller inputs */
+    font-size: 13px;
+  }
+
+  .submit-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+
 
   .search-container {
     flex-wrap: wrap;
