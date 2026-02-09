@@ -275,6 +275,8 @@ main {
   transition: opacity 0.8s ease;
   display: flex;
   align-items: center;
+  justify-content: center;
+  /* Center content in middle */
 }
 
 .hero-slide.active {
@@ -301,7 +303,8 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.2) 100%);
+  background: rgba(0, 0, 0, 0.5);
+  /* Even dark overlay */
   z-index: 1;
 }
 
@@ -312,7 +315,10 @@ main {
   max-width: 600px;
   color: var(--white);
   padding: 40px;
-  margin-left: 5%;
+  margin: 0 auto;
+  /* Center in middle */
+  text-align: center;
+  /* Center text */
 }
 
 .hero-rate {
@@ -401,6 +407,8 @@ main {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  justify-content: center;
+  /* Center badges */
 }
 
 .trust-badges span {
