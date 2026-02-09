@@ -4,46 +4,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prathamesh Home Services | Reliable Solutions at Your Doorstep</title>
+
+  <!-- SEO Title (Optimized for Home / Renovation Searches) -->
+  <title>
+    apana construction Home Services | Home Renovation, Marble & Painting Contractor
+  </title>
+
+  <!-- SEO Meta Description -->
+  <meta name="description"
+    content="Prathamesh Home Services offers expert home renovation, marble & tile flooring, painting, furniture work and complete house repair solutions. Trusted contractor for quality home services.">
+
+  <!-- SEO Keywords -->
+  <meta name="keywords"
+    content="home renovation services, marble contractor, painting services, house repair contractor, tile flooring, furniture work, civil contractor, home services">
+
+  <!-- SEO Essentials -->
+  <meta name="author" content="Prathamesh Home Services">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph (Google + Social Preview) -->
+  <meta property="og:title" content="Prathamesh Home Services | Home Renovation & Contractor">
+  <meta property="og:description"
+    content="Complete home solutions including renovation, marble flooring, painting and furniture work. Reliable and affordable services.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_IN">
+
+  <!-- Canonical URL (change domain later if needed) -->
+  <link rel="canonical" href="https://www.prathameshhomeservices.com/">
+
+  <!-- Existing CSS & Assets (UNCHANGED) -->
   <link rel="stylesheet" href="index.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
+
 <body>
 
   <!-- Header -->
-  <header class="header">
+  <header class="header" role="banner">
     <div class="container">
+      <!-- Clean, visible H1 -->
       <a href="/" class="logo">
-        <img src="logo1.png" alt="Prathamesh Logo">
-        <span>Prathamesh Rayke</span>
+        <h1>Apana Construction</h1>
+        <p class="tagline">Home Renovation & Interior Contractor</p>
       </a>
 
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/marble-flooring">Marble Flooring</a></li>
+          <li><a href="/painting">Painting</a></li>
+          <li><a href="/renovation">Renovation</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+
       <div class="header-controls">
-        <div class="header-city" id="headerCityToggle">
+        <!-- Local SEO: Simple city selector -->
+        <div class="location-selector" aria-label="Select city">
           <i class="fa-solid fa-location-dot"></i>
-          <span id="headerSelectedCity">Ahmedabad</span>
-          <i class="fa-solid fa-chevron-down"></i>
-          <div class="header-city-dropdown" id="headerCityDropdown">
-            <span class="city-option">Ahmedabad</span>
-            <span class="city-option">Mumbai</span>
-            <span class="city-option">Delhi</span>
-            <span class="city-option">Pune</span>
-            <span class="city-option">Bangalore</span>
-            <span class="city-option">Hyderabad</span>
-            <span class="city-option">Chennai</span>
-          </div>
+          <select id="citySelect" name="city">
+            <option value="ahmedabad">Ahmedabad</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="delhi">Delhi</option>
+            <option value="pune">Pune</option>
+            <option value="bangalore">Bangalore</option>
+          </select>
         </div>
 
-        <div class="auth">
-          <a href="#">Login</a>
-          <span>/</span>
-          <a href="#">Signup</a>
-        </div>
+
       </div>
     </div>
   </header>
+
+  <!-- Schema Markup for better SEO -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Apana Construction",
+  "description": "Home renovation, marble flooring, painting and interior contractor services",
+  "areaServed": ["Ahmedabad", "Mumbai", "Delhi", "Pune", "Bangalore"],
+  "serviceType": ["Home Renovation", "Marble Flooring", "Painting Services", "Interior Work"]
+}
+</script>
 
   <main>
     <!-- Hero Section with Slider -->
