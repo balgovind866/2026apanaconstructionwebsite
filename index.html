@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prathamesh Home Services | Reliable Solutions at Your Doorstep</title>
+  <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="/" class="logo">
+        <img src="logo1.png" alt="Prathamesh Logo">
+        <span>Prathamesh Rayke</span>
+      </a>
+
+      <div class="header-controls">
+        <div class="header-city" id="headerCityToggle">
+          <i class="fa-solid fa-location-dot"></i>
+          <span id="headerSelectedCity">Ahmedabad</span>
+          <i class="fa-solid fa-chevron-down"></i>
+          <div class="header-city-dropdown" id="headerCityDropdown">
+            <span class="city-option">Ahmedabad</span>
+            <span class="city-option">Mumbai</span>
+            <span class="city-option">Delhi</span>
+            <span class="city-option">Pune</span>
+            <span class="city-option">Bangalore</span>
+            <span class="city-option">Hyderabad</span>
+            <span class="city-option">Chennai</span>
+          </div>
+        </div>
+
+        <div class="auth">
+          <a href="#">Login</a>
+          <span>/</span>
+          <a href="#">Signup</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section with Slider -->
+    <section class="hero">
+      <div class="hero-slider">
+        <!-- Slide 1: Tiles -->
+        <div class="hero-slide active" style="background-image: url('project image/tiles_hero.png');">
+          <div class="hero-content">
+            <div class="hero-rate">Starts from ₹45/sq.ft</div>
+            <h1>Expert <span>Tiles & Marble</span> Fitting Professionals</h1>
+            <p>Premium quality tiles and marble fitting services for your dream home.</p>
+            <div class="hero-actions">
+              <button class="quote-btn">GET A QUOTE</button>
+              <a href="tel:8303065367" class="call-btn">
+                <i class="fa-solid fa-phone"></i>
+                8303065367
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 2: POP -->
+        <div class="hero-slide" style="background-image: url('project image/pop_hero.png');">
+          <div class="hero-content">
+            <div class="hero-rate">Starts from ₹95/sq.ft</div>
+            <h1>Modern <span>POP Design</span> & False Ceiling</h1>
+            <p>Transform your ceilings with artistic POP designs and perfect finishing.</p>
+            <div class="hero-actions">
+              <button class="quote-btn">GET A QUOTE</button>
+              <a href="tel:8303065367" class="call-btn">
+                <i class="fa-solid fa-phone"></i>
+                8303065367
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 3: Furniture -->
+        <div class="hero-slide" style="background-image: url('project image/furniture_hero.png');">
+          <div class="hero-content">
+            <div class="hero-rate">Custom Workspace from ₹499/sq.ft</div>
+            <h1>Luxury <span>Bespoke Furniture</span> & Interiors</h1>
+            <p>Handcrafted wooden furniture and complete interior solutions for elegant living.</p>
+            <div class="hero-actions">
+              <button class="quote-btn">GET A QUOTE</button>
+              <a href="tel:8303065367" class="call-btn">
+                <i class="fa-solid fa-phone"></i>
+                8303065367
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search Overlay Section -->
+    <section class="hero-search-wrapper">
+      <div class="container">
+        <div class="search-container">
+          <div class="search-location">
+            <i class="fa-solid fa-location-crosshairs"></i>
+            <span>Ahmedabad</span>
+          </div>
+          <div class="divider"></div>
+          <input type="text" placeholder="Search for services (cleaning, painting, etc.)">
+          <button class="search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dynamic Category Scroller -->
+    <section class="category-scroller">
+      <div class="scroller-track">
+        <!-- Repeat items for seamless scroll -->
+        <div class="scroller-item"><img src="project image/ban1.jpg" alt="Category 1"></div>
+        <div class="scroller-item"><img src="project image/ban2.jpg" alt="Category 2"></div>
+        <div class="scroller-item"><img src="project image/ban3.jpg" alt="Category 3"></div>
+        <div class="scroller-item"><img src="project image/ban6.jpg" alt="Category 6"></div>
+        <div class="scroller-item"><img src="project image/ban4.jpg" alt="Category 4"></div>
+        <div class="scroller-item"><img src="project image/ban5.jpg" alt="Category 5"></div>
+        <!-- Duplicate for seamlessness -->
+        <div class="scroller-item"><img src="project image/ban1.jpg" alt="Category 1"></div>
+        <div class="scroller-item"><img src="project image/ban2.jpg" alt="Category 2"></div>
+        <div class="scroller-item"><img src="project image/ban3.jpg" alt="Category 3"></div>
+        <div class="scroller-item"><img src="project image/ban4.jpg" alt="Category 4"></div>
+        <div class="scroller-item"><img src="project image/ban5.jpg" alt="Category 5"></div>
+        <div class="scroller-item"><img src="project image/ban6.jpg" alt="Category 6"></div>
+      </div>
+    </section>
+
+    <!-- Service Section: Cleaning -->
+    <section class="section">
+      <div class="container">
+        <div class="heading-container">
+          <h2>Cleaning Services</h2>
+          <div class="badge" style="background: var(--error-bg); color: var(--error-text);">Up to 50% Off</div>
+        </div>
+
+        <div class="slider-container">
+          <div class="slider-viewport" id="cleaning-viewport">
+            <div class="slider-track" id="cleaning-track">
+              <div class="service-card">
+                <div class="card-img-wrapper"><img src="project image/1.jpg" alt="Bathroom Cleaning"></div>
+                <p>Bathroom Cleaning</p>
+              </div>
+              <div class="service-card">
+                <div class="card-img-wrapper"><img src="project image/2.jpg" alt="Sofa Cleaning"></div>
+                <p>Sofa Cleaning</p>
+              </div>
+              <div class="service-card">
+                <div class="card-img-wrapper"><img src="project image/3.jpg" alt="Kitchen Cleaning"></div>
+                <p>Kitchen Cleaning</p>
+              </div>
+              <div class="service-card">
+                <div class="card-img-wrapper"><img src="project image/4.jpg" alt="Vacant Home Deep Cleaning"></div>
+                <p>Vacant Home Cleaning</p>
+              </div>
+              <div class="service-card">
+                <div class="card-img-wrapper"><img src="project image/5.jpg" alt="Occupied Home Deep Cleaning"></div>
+                <p>Occupied Home Cleaning</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Section: Painting -->
+    <section class="section">
+      <div class="container">
+        <div class="heading-container">
+          <h2>Painting Services</h2>
+          <div class="badge" style="background: var(--info-bg); color: var(--info-text);">100% In-House Staff</div>
+        </div>
+
+        <div class="slider-container">
+          <div class="slider-viewport">
+            <div class="slider-track">
+              <div class="service-card">
+                <div class="card-img-wrapper"><img src="project image/ps1.png" alt="Rental Painting"></div>
+                <p>Rental Painting</p>
+              </div>
+              <div class="service-card">
+                <div class="card-img-wrapper"><img src="project image/ps2.png" alt="Interior Painting"></div>
+                <p>Interior Painting</p>
+              </div>
+              <div class="service-card">
+                <div class="card-img-wrapper"><img src="project image/ps3.png" alt="Exterior Painting"></div>
+                <p>Exterior Painting</p>
+              </div>
+              <div class="service-card">
+                <div class="card-img-wrapper"><img src="project image/ps4.jpg" alt="Interior Texture"></div>
+                <p>Interior Texture</p>
+              </div>
+              <div class="service-card">
+                <div class="card-img-wrapper"><img src="project image/ps5.webp" alt="Exterior Texture"></div>
+                <p>Exterior Texture</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Section: Pest Control -->
+    <section class="section">
+      <div class="container">
+        <div class="heading-container">
+          <h2>Pest Control</h2>
+          <div class="badge" style="background: var(--success-bg); color: var(--success-text);">Licensed Company</div>
+        </div>
+
+        <div class="slider-container">
+          <div class="slider-viewport">
+            <div class="slider-track">
+              <div class="service-card">
+                <div class="card-img-wrapper"><img src="project image/pc1.png" alt="Cockroach Control"></div>
+                <p>Cockroach Control</p>
+              </div>
+              <div class="service-card">
+                <div class="card-img-wrapper"><img src="project image/pc2.png" alt="Bedbugs Control"></div>
+                <p>Bedbugs Control</p>
+              </div>
+              <div class="service-card">
+                <div class="card-img-wrapper"><img src="project image/pc3.png" alt="Mosquitoes Control"></div>
+                <p>Mosquitoes Control</p>
+              </div>
+              <div class="service-card">
+                <div class="card-img-wrapper"><img src="project image/pc4.png" alt="Termite Control"></div>
+                <p>Termite Control</p>
+              </div>
+              <div class="service-card">
+                <div class="card-img-wrapper"><img src="project image/pc5.png" alt="Woodborer Control"></div>
+                <p>Woodborer Control</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Section: Video Highlight -->
+    <section class="section video-section">
+      <div class="container">
+        <div class="heading-container" style="justify-content: center;">
+          <h2>Packers & Movers</h2>
+        </div>
+        <div class="video-container">
+          <video src="project image/Packers and Movers.webm" autoplay muted loop playsinline></video>
+        </div>
+        <button class="cta-btn">Book Now - Flat ₹200 Off</button>
+      </div>
+    </section>
+
+    <!-- Deal Section -->
+    <section class="section deal-section" style="background: #fff9e6;">
+      <div class="container">
+        <div class="heading-container">
+          <h2>Deals of the Week</h2>
+        </div>
+        <div class="timer">
+          <div class="timer-box"><b>20</b><span>Hours</span></div>
+          <div class="timer-box"><b>08</b><span>Mins</span></div>
+          <div class="timer-box"><b>05</b><span>Secs</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="footer-links">
+      <div class="container">
+        <div class="links-grid">
+          <div class="links-col">
+            <h3>Our Services</h3>
+            <ul>
+              <li><a href="#">Deep Home Cleaning</a></li>
+              <li><a href="#">Sofa & Carpet Cleaning</a></li>
+              <li><a href="#">Full Building Painting</a></li>
+              <li><a href="#">General Pest Control</a></li>
+              <li><a href="#">Bathroom Cleaning</a></li>
+            </ul>
+          </div>
+          <div class="links-col">
+            <h3>Major Cities</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+              <a href="#">Ahmedabad</a>
+              <a href="#">Mumbai</a>
+              <a href="#">Delhi</a>
+              <a href="#">Pune</a>
+              <a href="#">Bangalore</a>
+              <a href="#">Hyderabad</a>
+              <a href="#">Chennai</a>
+              <a href="#">Kolkata</a>
+            </div>
+          </div>
+          <div class="links-col">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="/" class="logo" style="margin-bottom: 20px;">
+            <img src="logo1.png" alt="Logo">
+            <span>Prathamesh</span>
+          </a>
+          <p>India's leading home service provider. We deliver quality services at your doorstep with 100% satisfaction
+            guarantee.</p>
+        </div>
+        <div class="links-col">
+          <h3>Contact</h3>
+          <p>Email: info@prathamesh.com</p>
+          <p>Phone: +91 98765 43210</p>
+        </div>
+        <div class="links-col">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="#" class="social-btn" style="background: #E4405F;"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-btn" style="background: #CD201F;"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="social-btn" style="background: #0077B5;"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" class="social-btn" style="background: #1DA1F2;"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="links-col">
+          <h3>Get the App</h3>
+          <div class="app-btns">
+            <a href="#"><img src="images/appstore.png" alt="App Store"></a>
+            <a href="#"><img src="images/playstore.png" alt="Play Store"></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Prathamesh Home Services. All rights reserved. | Version 3.29</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // City Dropdown Logic
+    const headerToggle = document.getElementById("headerCityToggle");
+    const headerDropdown = document.getElementById("headerCityDropdown");
+    const headerSelectedCity = document.getElementById("headerSelectedCity");
+
+    headerToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      headerDropdown.style.display = headerDropdown.style.display === "block" ? "none" : "block";
+    });
+
+    document.querySelectorAll(".city-option").forEach(city => {
+      city.addEventListener("click", () => {
+        headerSelectedCity.textContent = city.textContent;
+        headerDropdown.style.display = "none";
+      });
+    });
+
+    document.addEventListener("click", () => {
+      headerDropdown.style.display = "none";
+    });
+
+    // Hero Slider Logic
+    const slides = document.querySelectorAll('.hero-slide');
+    let currentSlide = 0;
+
+    function nextSlide() {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+
+    setInterval(nextSlide, 5000); // Change slide every 5 seconds
+
+    // Quote Buttons Logic
+    document.querySelectorAll('.quote-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        window.location.href = "tel:8303065367";
+      });
+    });
+  </script>
+</body>
+
+</html>
