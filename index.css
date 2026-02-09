@@ -248,18 +248,19 @@ main {
 }
 
 /* Hero Section */
-/* Hero Section with Slider */
 .hero {
   position: relative;
   overflow: hidden;
   padding: 0;
-  height: 500px;
+  height: 70vh;
+  /* 80% of viewport height */
+  min-height: 500px;
+  display: flex;
+  background: #1a1a2e;
 }
 
 .hero-slider {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
   height: 100%;
 }
@@ -271,17 +272,26 @@ main {
   width: 100%;
   height: 100%;
   opacity: 0;
-
+  transition: opacity 0.8s ease;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-size: cover;
-  background-position: center;
 }
 
 .hero-slide.active {
   opacity: 1;
   z-index: 1;
+}
+
+/* Hero Background Image */
+.hero-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
 }
 
 .hero-slide::before {
@@ -291,107 +301,258 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.45);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.2) 100%);
+  z-index: 1;
 }
 
+/* Hero Content */
 .hero-content {
   position: relative;
   z-index: 2;
-  text-align: center;
-  /* Centered Text */
-  max-width: 800px;
+  max-width: 600px;
   color: var(--white);
-  padding: 0 20px;
-  margin: 0 auto;
-  /* Center in container */
-  /* Shift slightly left on desktop to balance form if needed, or keep centered */
-  /* For purely centered text over the image as requested: */
-  left: -150px;
-  /* Offset to left to make room for form on right */
+  padding: 40px;
+  margin-left: 5%;
+}
+
+.hero-rate {
+  display: inline-block;
+  background: var(--secondary-color);
+  color: var(--white);
+  padding: 4px 16px;
+  border-radius: var(--radius-full);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
 
 .hero-content h1 {
-  font-size: 48px;
+  font-size: 35px;
   font-weight: 900;
-  margin-bottom: 20px;
-  line-height: 1.1;
+  margin-bottom: 15px;
+  line-height: 1.15;
   color: var(--white);
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-.hero-content h1 span {
+.hero-content h1 .highlight {
   color: var(--secondary-color);
 }
 
-.hero-content p {
-  font-size: 18px;
-  margin-bottom: 30px;
-  color: var(--white);
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-  max-width: 100%;
+.service-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
 }
 
-/* ... existing hero-rate / hero-actions styles ... */
+.hero-content p {
+  font-size: 10px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: rgba(255, 255, 255, 0.9);
+}
 
-/* Hero Form Overlay */
-.hero-form-container {
+/* Hero Actions */
+.hero-actions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.quote-btn {
+  background: var(--secondary-color);
+  color: var(--white);
+  padding: 10px 10px;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.quote-btn:hover {
+  background: #c94830;
+  transform: translateY(-2px);
+}
+
+.call-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  border: 2px solid var(--white);
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+.call-btn:hover {
+  background: var(--white);
+  color: var(--primary-color);
+}
+
+/* Trust Badges */
+.trust-badges {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.trust-badges span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.trust-badges i {
+  color: var(--secondary-color);
+}
+
+/* Slider Controls */
+.slider-controls {
   position: absolute;
   top: 50%;
-  right: 5%;
+  left: 0;
+  right: 0;
   transform: translateY(-50%);
-  width: 320px;
-  /* Smaller width */
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.slider-btn {
+  width: 50px;
+  height: 50px;
   background: rgba(255, 255, 255, 0.2);
-  /* Transparent background */
-  padding: 20px;
-  border-radius: var(--radius-lg);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  /* Glassmorphism effect */
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 50%;
+  color: var(--white);
+  font-size: 18px;
+  cursor: pointer;
+  transition: var(--transition);
+  pointer-events: auto;
+  backdrop-filter: blur(5px);
+}
+
+.slider-btn:hover {
+  background: var(--secondary-color);
+}
+
+/* Slider Indicators */
+.slider-indicators {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
   z-index: 10;
 }
 
+.slider-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.slider-indicators button.active {
+  background: var(--secondary-color);
+  width: 30px;
+  border-radius: 6px;
+}
+
+/* Hero Form Container */
+.hero-form-container {
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  transform: translateY(-50%);
+  width: 280px;
+  max-height: 80vh;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  z-index: 20;
+}
+
 .hero-form h3 {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: var(--white);
-  /* White text for contrast on dark bg */
   font-size: 20px;
   text-align: center;
-  font-weight: 700;
+  font-weight: 800;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+.form-subtitle {
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 15px;
+}
+
+.form-subtitle i {
+  color: var(--secondary-color);
+  margin-right: 5px;
+}
+
 .form-group {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .form-group label {
   display: block;
-  font-size: 13px;
-  margin-bottom: 4px;
+  font-size: 11px;
+  margin-bottom: 3px;
   font-weight: 600;
   color: var(--white);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-.form-group input {
+.form-group .required {
+  color: #ff6b6b;
+}
+
+.form-group input,
+.form-group select {
   width: 100%;
-  padding: 10px;
+  padding: 8px 10px;
   background: rgba(255, 255, 255, 0.9);
-  /* Visible fields */
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: var(--radius-sm);
-  font-size: 14px;
+  font-size: 13px;
   transition: var(--transition);
-  color: #333;
+  color: var(--text-main);
 }
 
-.form-group input:focus {
+.form-group input:focus,
+.form-group select:focus {
   background: #fff;
   border-color: var(--secondary-color);
   outline: none;
-  box-shadow: 0 0 0 3px rgba(232, 93, 4, 0.2);
+  box-shadow: 0 0 0 3px rgba(232, 93, 4, 0.15);
+}
+
+.form-hint {
+  display: none;
+  /* Hide to save space */
 }
 
 .submit-btn {
@@ -404,15 +565,48 @@ main {
   font-weight: 700;
   cursor: pointer;
   transition: var(--transition);
-  font-size: 15px;
-  margin-top: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 .submit-btn:hover {
   background: #d45500;
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
+}
+
+/* Form Note */
+.form-note {
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 15px;
+}
+
+.form-note i {
+  color: #28a745;
+  margin-right: 5px;
+}
+
+.form-footer {
+  text-align: center;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.form-footer small {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.form-footer i {
+  color: var(--secondary-color);
+  margin-right: 3px;
 }
 
 .hero-rate {
@@ -481,7 +675,7 @@ main {
 .hero-search-wrapper {
   margin-top: 40px;
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
   margin-left: auto;
   margin-right: auto;
 }

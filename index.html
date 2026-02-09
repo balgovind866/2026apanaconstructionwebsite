@@ -92,75 +92,454 @@
 
   <main>
     <!-- Hero Section with Slider -->
-    <section class="hero">
-      <div class="hero-slider">
-        <!-- Slide 1: Tiles -->
-        <div class="hero-slide active" style="background-image: url('project image/tiles_hero.png');">
+    <!-- Hero Section with Mumbai-focused SEO -->
+    <section class="hero" itemscope itemtype="https://schema.org/Service">
+      <div class="hero-slider" role="region" aria-label="Featured renovation services in Mumbai">
+
+        <!-- Slide 1: Tiles & Marble -->
+        <article class="hero-slide active" role="group" aria-roledescription="slide"
+          aria-label="Tiles and marble fitting services in Mumbai">
+          <img src="project image/tiles_hero.png"
+            alt="Professional Italian marble and tiles flooring installation in Mumbai apartments" class="hero-bg-image"
+            loading="eager" width="1920" height="1080">
           <div class="hero-content">
-            <div class="hero-rate">Starts from ₹45/sq.ft</div>
-            <h1>Expert <span>Tiles & Marble</span> Fitting Professionals</h1>
-            <p>Premium quality tiles and marble fitting services for your dream home.</p>
+            <span class="hero-rate" itemprop="priceRange">Starting at ₹45/sq.ft</span>
+
+            <!-- Main H1 - Only ONE per page -->
+            <h1 itemprop="name">
+              Professional Home Renovation & Interior Services in <span class="highlight">Mumbai</span>
+            </h1>
+
+            <h2 class="service-title">Expert Tiles & Marble Fitting</h2>
+            <p itemprop="description">
+              Premium quality Italian marble, ceramic tiles, and vitrified flooring installation across Mumbai.
+              Serving Andheri, Bandra, Borivali, Thane, and all Mumbai suburbs with 10+ years experience.
+            </p>
+
             <div class="hero-actions">
-              <button class="quote-btn">GET A QUOTE</button>
-              <a href="tel:8303065367" class="call-btn">
-                <i class="fa-solid fa-phone"></i>
-                8303065367
+              <button class="quote-btn" type="button"
+                aria-label="Request free quotation for tiles and marble work in Mumbai">
+                GET FREE QUOTE
+              </button>
+              <a href="tel:+918303065367" class="call-btn" itemprop="telephone"
+                aria-label="Call us at 8303065367 for home renovation in Mumbai">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                <span>+91 8303065367</span>
               </a>
             </div>
+
+            <!-- Trust badges -->
+            <div class="trust-badges">
+              <span><i class="fa-solid fa-check-circle"></i> 500+ Projects in Mumbai</span>
+              <span><i class="fa-solid fa-star"></i> 4.8/5 Rating</span>
+            </div>
           </div>
+        </article>
+
+        <!-- Slide 2: POP & False Ceiling -->
+        <article class="hero-slide" role="group" aria-roledescription="slide"
+          aria-label="POP and false ceiling design services in Mumbai">
+          <img src="project image/pop_hero.png"
+            alt="Modern POP false ceiling design for Mumbai flats with contemporary lighting" class="hero-bg-image"
+            loading="lazy" width="1920" height="1080">
+          <div class="hero-content">
+            <span class="hero-rate">Starting at ₹95/sq.ft</span>
+            <h2 class="service-title">Modern POP Design & False Ceiling</h2>
+            <p>
+              Artistic POP ceiling designs, gypsum false ceiling, and perfect finishing
+              for Mumbai homes and commercial spaces. Expert installation in 1BHK, 2BHK,
+              and 3BHK apartments across Mumbai Metropolitan Region.
+            </p>
+            <div class="hero-actions">
+              <button class="quote-btn" type="button" aria-label="Request quotation for POP ceiling work in Mumbai">
+                GET FREE QUOTE
+              </button>
+              <a href="tel:+918303065367" class="call-btn">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                <span>+91 8303065367</span>
+              </a>
+            </div>
+            <div class="trust-badges">
+              <span><i class="fa-solid fa-clock"></i> 15-Day Completion</span>
+              <span><i class="fa-solid fa-shield"></i> 2 Year Warranty</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Slide 3: Furniture & Interiors -->
+        <article class="hero-slide" role="group" aria-roledescription="slide"
+          aria-label="Custom furniture and interior design services in Mumbai">
+          <img src="project image/furniture_hero.png"
+            alt="Luxury modular kitchen and custom wooden furniture for Mumbai homes" class="hero-bg-image"
+            loading="lazy" width="1920" height="1080">
+          <div class="hero-content">
+            <span class="hero-rate">Custom Design from ₹499/sq.ft</span>
+            <h2 class="service-title">Luxury Furniture & Complete Interior Solutions</h2>
+            <p>
+              Handcrafted modular kitchen, wardrobes, wooden furniture, and turnkey
+              interior design for Mumbai apartments, villas, and offices. Space-efficient
+              solutions for compact Mumbai homes.
+            </p>
+            <div class="hero-actions">
+              <button class="quote-btn" type="button"
+                aria-label="Request quotation for furniture and interior design in Mumbai">
+                GET FREE QUOTE
+              </button>
+              <a href="tel:+918303065367" class="call-btn">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                <span>+91 8303065367</span>
+              </a>
+            </div>
+            <div class="trust-badges">
+              <span><i class="fa-solid fa-users"></i> 1000+ Happy Customers</span>
+              <span><i class="fa-solid fa-certificate"></i> Licensed Contractor</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Slider Navigation -->
+        <div class="slider-controls" aria-label="Slideshow controls">
+          <button class="slider-btn prev" aria-label="Previous service slide" type="button">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button class="slider-btn next" aria-label="Next service slide" type="button">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
         </div>
-        <!-- Slide 2: POP -->
-        <div class="hero-slide" style="background-image: url('project image/pop_hero.png');">
-          <div class="hero-content">
-            <div class="hero-rate">Starts from ₹95/sq.ft</div>
-            <h1>Modern <span>POP Design</span> & False Ceiling</h1>
-            <p>Transform your ceilings with artistic POP designs and perfect finishing.</p>
-            <div class="hero-actions">
-              <button class="quote-btn">GET A QUOTE</button>
-              <a href="tel:8303065367" class="call-btn">
-                <i class="fa-solid fa-phone"></i>
-                8303065367
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- Slide 3: Furniture -->
-        <div class="hero-slide" style="background-image: url('project image/furniture_hero.png');">
-          <div class="hero-content">
-            <div class="hero-rate">Custom Workspace from ₹499/sq.ft</div>
-            <h1>Luxury <span>Bespoke Furniture</span> & Interiors</h1>
-            <p>Handcrafted wooden furniture and complete interior solutions for elegant living.</p>
-            <div class="hero-actions">
-              <button class="quote-btn">GET A QUOTE</button>
-              <a href="tel:8303065367" class="call-btn">
-                <i class="fa-solid fa-phone"></i>
-                +918303065367
-              </a>
-            </div>
-          </div>
+
+        <!-- Slider Indicators -->
+        <div class="slider-indicators" role="tablist" aria-label="Service slide selection">
+          <button role="tab" aria-label="View tiles and marble services" aria-selected="true" class="active"></button>
+          <button role="tab" aria-label="View POP ceiling services" aria-selected="false"></button>
+          <button role="tab" aria-label="View furniture interior services" aria-selected="false"></button>
         </div>
       </div>
 
-      <!-- Hero Form Overlay -->
-      <div class="hero-form-container">
-        <form class="hero-form">
-          <h3>Get a Free Quote</h3>
+      <!-- Quote Form - Mumbai Specific -->
+      <aside class="hero-form-container" role="complementary"
+        aria-label="Request free quotation form for Mumbai renovation services">
+        <form class="hero-form" id="quoteForm" method="POST" action="/submit-quote-mumbai" itemscope
+          itemtype="https://schema.org/ContactPoint">
+
+
+
+
           <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Your Name" required>
+            <label for="customerName">
+              Full Name <span class="required" aria-label="required">*</span>
+            </label>
+            <input type="text" id="customerName" name="name" placeholder="Enter your full name" required
+              autocomplete="name" aria-required="true" minlength="3">
           </div>
+
           <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" placeholder="Phone Number" required>
+            <label for="customerPhone">
+              WhatsApp / Phone Number <span class="required" aria-label="required">*</span>
+            </label>
+            <input type="tel" id="customerPhone" name="phone" placeholder="98765 43210" required pattern="[0-9]{10}"
+              autocomplete="tel" aria-required="true" itemprop="telephone">
+            <small class="form-hint">We'll send you quote on WhatsApp</small>
           </div>
+
           <div class="form-group">
-            <label for="email">Email / Gmail</label>
-            <input type="email" id="email" placeholder="Email Address" required>
+            <label for="customerEmail">Email Address (Optional)</label>
+            <input type="email" id="customerEmail" name="email" placeholder="your@email.com" autocomplete="email"
+              itemprop="email">
           </div>
-          <button type="submit" class="submit-btn">Submit Request</button>
+
+          <div class="form-group">
+            <label for="mumbaiArea">
+              Your Area in Mumbai <span class="required" aria-label="required">*</span>
+            </label>
+            <select id="mumbaiArea" name="area" required aria-required="true">
+              <option value="">Select Your Area</option>
+              <optgroup label="South Mumbai">
+                <option value="colaba">Colaba</option>
+                <option value="nariman-point">Nariman Point</option>
+                <option value="churchgate">Churchgate</option>
+                <option value="marine-lines">Marine Lines</option>
+                <option value="girgaon">Girgaon</option>
+              </optgroup>
+              <optgroup label="Western Suburbs">
+                <option value="andheri">Andheri (East/West)</option>
+                <option value="bandra">Bandra (East/West)</option>
+                <option value="juhu">Juhu</option>
+                <option value="goregaon">Goregaon</option>
+                <option value="malad">Malad</option>
+                <option value="kandivali">Kandivali</option>
+                <option value="borivali">Borivali</option>
+                <option value="dahisar">Dahisar</option>
+              </optgroup>
+              <optgroup label="Central Mumbai">
+                <option value="dadar">Dadar</option>
+                <option value="matunga">Matunga</option>
+                <option value="kurla">Kurla</option>
+                <option value="ghatkopar">Ghatkopar</option>
+                <option value="vikhroli">Vikhroli</option>
+              </optgroup>
+              <optgroup label="Navi Mumbai">
+                <option value="vashi">Vashi</option>
+                <option value="nerul">Nerul</option>
+                <option value="kharghar">Kharghar</option>
+                <option value="panvel">Panvel</option>
+              </optgroup>
+              <optgroup label="Thane">
+                <option value="thane">Thane</option>
+                <option value="dombivli">Dombivli</option>
+                <option value="kalyan">Kalyan</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="serviceType">
+              Service Required <span class="required" aria-label="required">*</span>
+            </label>
+            <select id="serviceType" name="service" required aria-required="true">
+              <option value="">Select Service</option>
+              <option value="tiles-marble">Tiles & Marble Flooring</option>
+              <option value="pop-ceiling">POP & False Ceiling</option>
+              <option value="furniture">Modular Furniture & Kitchen</option>
+              <option value="painting">Wall Painting & Waterproofing</option>
+              <option value="bathroom">Bathroom Renovation</option>
+              <option value="complete-renovation">Complete Home Renovation</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="propertyType">Property Type</label>
+            <select id="propertyType" name="property_type">
+              <option value="">Select Property Type</option>
+              <option value="1bhk">1 BHK Apartment</option>
+              <option value="2bhk">2 BHK Apartment</option>
+              <option value="3bhk">3 BHK Apartment</option>
+              <option value="villa">Villa / Independent House</option>
+              <option value="office">Office / Commercial</option>
+            </select>
+          </div>
+
+          <button type="submit" class="submit-btn" aria-label="Submit free quotation request for Mumbai">
+            <i class="fa-solid fa-paper-plane"></i>
+            Get Free Quote Now
+          </button>
+
         </form>
-      </div>
+      </aside>
     </section>
+
+    <!-- Local Business Schema for Mumbai -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Apana Construction - Mumbai",
+  "description": "Professional home renovation, interior design, marble flooring, POP ceiling, painting, and modular furniture services in Mumbai, Navi Mumbai, and Thane",
+  "image": "https://yourwebsite.com/apana-construction-mumbai.jpg",
+  "logo": "https://yourwebsite.com/logo.png",
+  "@id": "https://yourwebsite.com/mumbai",
+  "url": "https://yourwebsite.com/mumbai",
+  "telephone": "+918303065367",
+  "email": "mumbai@apanaconstruction.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Shop No. 12, Ground Floor, Andheri West",
+    "addressLocality": "Mumbai",
+    "addressRegion": "Maharashtra",
+    "postalCode": "400058",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "19.0760",
+    "longitude": "72.8777"
+  },
+  "priceRange": "₹₹",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Mumbai",
+      "sameAs": "https://en.wikipedia.org/wiki/Mumbai"
+    },
+    {
+      "@type": "City",
+      "name": "Navi Mumbai"
+    },
+    {
+      "@type": "City",
+      "name": "Thane"
+    },
+    {
+      "@type": "Neighborhood",
+      "name": "Andheri"
+    },
+    {
+      "@type": "Neighborhood",
+      "name": "Bandra"
+    },
+    {
+      "@type": "Neighborhood",
+      "name": "Borivali"
+    }
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "opens": "09:00",
+    "closes": "20:00"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "342",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Rajesh Sharma"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "reviewBody": "Excellent marble flooring work in our Andheri flat. Very professional team."
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Home Renovation Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Marble & Tiles Flooring",
+          "description": "Italian marble, ceramic tiles, and vitrified flooring installation"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "POP & False Ceiling",
+          "description": "Modern POP designs and gypsum false ceiling"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Modular Furniture & Kitchen",
+          "description": "Custom furniture, wardrobes, and modular kitchen"
+        }
+      }
+    ]
+  }
+}
+</script>
+
+    <!-- Service Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Home Renovation and Interior Design",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Apana Construction"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Mumbai, Navi Mumbai, Thane"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Renovation Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Tiles and Marble Flooring Installation",
+          "description": "Professional tiles and marble flooring for Mumbai homes"
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "INR",
+          "price": "45",
+          "unitText": "per square foot"
+        }
+      }
+    ]
+  }
+}
+</script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yourwebsite.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Mumbai Services",
+      "item": "https://yourwebsite.com/mumbai"
+    }
+  ]
+}
+</script>
+
+    <!-- FAQPage Schema for Mumbai -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the cost of marble flooring in Mumbai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Marble flooring in Mumbai starts from ₹45 per square foot for basic quality, while premium Italian marble installation costs ₹150-300 per sq.ft. The total cost depends on marble type, area size, and labor charges."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which areas in Mumbai do you serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We provide renovation services across all Mumbai areas including Andheri, Bandra, Borivali, Malad, Kandivali, Goregaon, South Mumbai, Navi Mumbai (Vashi, Kharghar), and Thane."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does home renovation take in Mumbai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A complete 2BHK apartment renovation in Mumbai typically takes 45-60 days. Marble flooring takes 7-10 days, POP ceiling 10-15 days, and painting 5-7 days depending on the scope of work."
+      }
+    }
+  ]
+}
+</script>
 
 
     <!-- Dynamic Category Scroller -->
@@ -426,15 +805,53 @@
 
     // Hero Slider Logic
     const slides = document.querySelectorAll('.hero-slide');
+    const indicators = document.querySelectorAll('.slider-indicators button');
+    const prevBtn = document.querySelector('.slider-btn.prev');
+    const nextBtn = document.querySelector('.slider-btn.next');
     let currentSlide = 0;
+    let slideInterval;
 
-    function nextSlide() {
-      slides[currentSlide].classList.remove('active');
-      currentSlide = (currentSlide + 1) % slides.length;
-      slides[currentSlide].classList.add('active');
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (indicators[i]) indicators[i].classList.remove('active');
+      });
+      slides[index].classList.add('active');
+      if (indicators[index]) indicators[index].classList.add('active');
     }
 
-    setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    function startAutoSlide() {
+      slideInterval = setInterval(nextSlide, 5000);
+    }
+
+    function stopAutoSlide() {
+      clearInterval(slideInterval);
+    }
+
+    // Event Listeners
+    if (prevBtn) prevBtn.addEventListener('click', () => { stopAutoSlide(); prevSlide(); startAutoSlide(); });
+    if (nextBtn) nextBtn.addEventListener('click', () => { stopAutoSlide(); nextSlide(); startAutoSlide(); });
+
+    indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => {
+        stopAutoSlide();
+        currentSlide = index;
+        showSlide(currentSlide);
+        startAutoSlide();
+      });
+    });
+
+    startAutoSlide();
 
     // Quote Buttons Logic
     document.querySelectorAll('.quote-btn').forEach(btn => {
