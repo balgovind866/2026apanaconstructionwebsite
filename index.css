@@ -2,7 +2,7 @@
   /* Colors */
   --primary-color: #004084;
   --primary-hover: #022e5c;
-  --secondary-color: #e85d04;
+  --secondary-color: #004084;
   --secondary-bg: #cfeff8;
   --text-main: #222;
   --text-muted: #555;
@@ -555,7 +555,7 @@ main {
   background: #fff;
   border-color: var(--secondary-color);
   outline: none;
-  box-shadow: 0 0 0 3px rgba(232, 93, 4, 0.15);
+  box-shadow: 0 0 0 3px rgba(0, 64, 132, 0.15);
 }
 
 .form-hint {
@@ -582,7 +582,7 @@ main {
 }
 
 .submit-btn:hover {
-  background: #d45500;
+  background: #022e5c;
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
@@ -651,7 +651,7 @@ main {
 
 .quote-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(232, 93, 4, 0.3);
+  box-shadow: 0 10px 20px rgba(0, 64, 132, 0.3);
 }
 
 .call-btn {
