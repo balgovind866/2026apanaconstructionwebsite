@@ -116,30 +116,88 @@ ul {
 }
 
 /* Logo Styles */
+/* Logo Styles - Updated for horizontal layout */
 .logo {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  /* Changed from column to row */
+  align-items: center;
+  justify-content: flex-start;
+  /* Changed from center to flex-start */
   color: var(--primary-color);
   text-decoration: none;
+  gap: 2px;
+  /* Increased gap for horizontal spacing */
+}
+
+.logo-img {
+  height: 100px;
+  /* Slightly larger for horizontal layout */
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  /* Prevent logo from shrinking */
+}
+
+.logo-text {
+
+  /* Changed from center to left */
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .logo h1 {
-  font-size: 24px;
+  font-size: 20px;
+  /* Increased from 18px */
   font-weight: 900;
   line-height: 1.1;
   color: var(--primary-color);
   margin: 0;
   text-transform: uppercase;
   letter-spacing: -0.5px;
+  white-space: nowrap;
+  /* Prevent text wrapping */
 }
 
 .logo .tagline {
   font-size: 11px;
+  /* Slightly increased from 10px */
   font-weight: 600;
   color: var(--secondary-color);
   letter-spacing: 0.5px;
-  margin-top: 2px;
+  margin-top: 0;
+  white-space: nowrap;
+  /* Prevent text wrapping */
+}
+
+@media (max-width: 768px) {
+  .logo {
+    gap: 8px;
+    /* Smaller gap on mobile */
+  }
+
+  .logo-img {
+    height: 40px;
+    /* Smaller logo on mobile */
+  }
+
+  .logo h1 {
+    font-size: 16px;
+  }
+
+  .logo .tagline {
+    font-size: 9px;
+    display: block;
+    /* Show tagline on mobile if space allows */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo .tagline {
+    display: none;
+    /* Hide tagline on very small screens */
+  }
 }
 
 /* Main Navigation */
