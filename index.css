@@ -664,70 +664,27 @@ main {
   border-radius: 6px;
 }
 
-/* Hero Form Container */
-.hero-form-container {
-  position: absolute;
-  top: 50%;
-  right: 3%;
-  transform: translateY(-50%);
-  width: 280px;
-  max-height: 80vh;
-  overflow-y: auto;
-  background: rgba(255, 255, 255, 0.15);
-  padding: 15px;
-  border-radius: var(--radius-lg);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  z-index: 20;
-}
-
-.hero-form h3 {
-  margin-bottom: 10px;
-  color: var(--white);
-  font-size: 20px;
-  text-align: center;
-  font-weight: 800;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.form-subtitle {
-  text-align: center;
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.85);
-  margin-bottom: 15px;
-}
-
-.form-subtitle i {
-  color: var(--secondary-color);
-  margin-right: 5px;
-}
-
+/* Quotation Form Styles (Shared) */
 .form-group {
-  margin-bottom: 8px;
+  margin-bottom: 15px;
 }
 
 .form-group label {
   display: block;
-  font-size: 11px;
-  margin-bottom: 3px;
+  font-size: 14px;
+  margin-bottom: 5px;
   font-weight: 600;
-  color: var(--white);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-.form-group .required {
-  color: #ff6b6b;
+  color: var(--text-main);
 }
 
 .form-group input,
 .form-group select {
   width: 100%;
-  padding: 8px 10px;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 12px 15px;
+  background: #f8f9fa;
+  border: 1px solid #ddd;
   border-radius: var(--radius-sm);
-  font-size: 13px;
+  font-size: 15px;
   transition: var(--transition);
   color: var(--text-main);
 }
@@ -737,34 +694,29 @@ main {
   background: #fff;
   border-color: var(--secondary-color);
   outline: none;
-  box-shadow: 0 0 0 3px rgba(0, 64, 132, 0.15);
-}
-
-.form-hint {
-  display: none;
-  /* Hide to save space */
+  box-shadow: 0 0 0 3px rgba(0, 64, 132, 0.1);
 }
 
 .submit-btn {
   width: 100%;
   background: var(--secondary-color);
   color: var(--white);
-  padding: 10px;
+  padding: 14px;
   border: none;
   border-radius: var(--radius-sm);
   font-weight: 700;
   cursor: pointer;
   transition: var(--transition);
-  font-size: 14px;
-  margin-top: 8px;
+  font-size: 16px;
+  margin-top: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .submit-btn:hover {
-  background: #022e5c;
+  background: var(--primary-hover);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
@@ -1352,5 +1304,152 @@ main {
 
   .nav-btn {
     display: none;
+  }
+}
+
+/* Floating Action Button (FAB) */
+.fab-quote {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 65px;
+  height: 65px;
+  background: var(--secondary-color);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: var(--shadow-lg);
+  cursor: pointer;
+  z-index: 1500;
+  transition: var(--transition);
+  border: 4px solid var(--white);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 64, 132, 0.7);
+  }
+
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 15px rgba(0, 64, 132, 0);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 64, 132, 0);
+  }
+}
+
+.fab-quote:hover {
+  background: var(--primary-hover);
+  transform: scale(1.1);
+}
+
+.fab-quote i {
+  color: var(--white);
+}
+
+/* Modal System */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  z-index: 3000;
+  overflow-y: auto;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: var(--white);
+  width: 100%;
+  max-width: 450px;
+  border-radius: var(--radius-lg);
+  position: relative;
+  overflow: hidden;
+  animation: modalIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-lg);
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-header {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 20px;
+  text-align: center;
+}
+
+.modal-header h2 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.modal-header p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: var(--white);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3100;
+  transition: var(--transition);
+}
+
+.close-modal:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(90deg);
+}
+
+.modal-body {
+  padding: 25px;
+}
+
+/* Mobile specific for FAB */
+@media (max-width: 768px) {
+  .fab-quote {
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    font-size: 20px;
   }
 }

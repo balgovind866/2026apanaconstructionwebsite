@@ -429,116 +429,6 @@
         </div>
       </div>
 
-      <!-- Quote Form - Mumbai Specific -->
-      <aside class="hero-form-container" role="complementary"
-        aria-label="Request free quotation form for Mumbai renovation services">
-        <form class="hero-form" id="quoteForm" method="POST" action="/submit-quote-mumbai" itemscope
-          itemtype="https://schema.org/ContactPoint">
-
-
-
-
-          <div class="form-group">
-            <label for="customerName">
-              Full Name <span class="required" aria-label="required">*</span>
-            </label>
-            <input type="text" id="customerName" name="name" placeholder="Enter your full name" required
-              autocomplete="name" aria-required="true" minlength="3">
-          </div>
-
-          <div class="form-group">
-            <label for="customerPhone">
-              WhatsApp / Phone Number <span class="required" aria-label="required">*</span>
-            </label>
-            <input type="tel" id="customerPhone" name="phone" placeholder="98765 43210" required pattern="[0-9]{10}"
-              autocomplete="tel" aria-required="true" itemprop="telephone">
-            <small class="form-hint">We'll send you quote on WhatsApp</small>
-          </div>
-
-          <div class="form-group">
-            <label for="customerEmail">Email Address (Optional)</label>
-            <input type="email" id="customerEmail" name="email" placeholder="your@email.com" autocomplete="email"
-              itemprop="email">
-          </div>
-
-          <div class="form-group">
-            <label for="mumbaiArea">
-              Your Area in Mumbai <span class="required" aria-label="required">*</span>
-            </label>
-            <select id="mumbaiArea" name="area" required aria-required="true">
-              <option value="">Select Your Area</option>
-              <optgroup label="South Mumbai">
-                <option value="colaba">Colaba</option>
-                <option value="nariman-point">Nariman Point</option>
-                <option value="churchgate">Churchgate</option>
-                <option value="marine-lines">Marine Lines</option>
-                <option value="girgaon">Girgaon</option>
-              </optgroup>
-              <optgroup label="Western Suburbs">
-                <option value="andheri">Andheri (East/West)</option>
-                <option value="bandra">Bandra (East/West)</option>
-                <option value="juhu">Juhu</option>
-                <option value="goregaon">Goregaon</option>
-                <option value="malad">Malad</option>
-                <option value="kandivali">Kandivali</option>
-                <option value="borivali">Borivali</option>
-                <option value="dahisar">Dahisar</option>
-              </optgroup>
-              <optgroup label="Central Mumbai">
-                <option value="dadar">Dadar</option>
-                <option value="matunga">Matunga</option>
-                <option value="kurla">Kurla</option>
-                <option value="ghatkopar">Ghatkopar</option>
-                <option value="vikhroli">Vikhroli</option>
-              </optgroup>
-              <optgroup label="Navi Mumbai">
-                <option value="vashi">Vashi</option>
-                <option value="nerul">Nerul</option>
-                <option value="kharghar">Kharghar</option>
-                <option value="panvel">Panvel</option>
-              </optgroup>
-              <optgroup label="Thane">
-                <option value="thane">Thane</option>
-                <option value="dombivli">Dombivli</option>
-                <option value="kalyan">Kalyan</option>
-              </optgroup>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="serviceType">
-              Service Required <span class="required" aria-label="required">*</span>
-            </label>
-            <select id="serviceType" name="service" required aria-required="true">
-              <option value="">Select Service</option>
-              <option value="tiles-marble">Tiles & Marble Flooring</option>
-              <option value="pop-ceiling">POP & False Ceiling</option>
-              <option value="furniture">Modular Furniture & Kitchen</option>
-              <option value="painting">Wall Painting & Waterproofing</option>
-              <option value="bathroom">Bathroom Renovation</option>
-              <option value="complete-renovation">Complete Home Renovation</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="propertyType">Property Type</label>
-            <select id="propertyType" name="property_type">
-              <option value="">Select Property Type</option>
-              <option value="1bhk">1 BHK Apartment</option>
-              <option value="2bhk">2 BHK Apartment</option>
-              <option value="3bhk">3 BHK Apartment</option>
-              <option value="villa">Villa / Independent House</option>
-              <option value="office">Office / Commercial</option>
-            </select>
-          </div>
-
-          <button type="submit" class="submit-btn" aria-label="Submit free quotation request for Mumbai">
-            <i class="fa-solid fa-paper-plane"></i>
-            Get Free Quote Now
-          </button>
-
-        </form>
-      </aside>
     </section>
 
     <!-- Local Business Schema for Mumbai -->
@@ -1238,26 +1128,109 @@
 }
 </script>
 
+  <!-- Floating Action Button -->
+  <div class="fab-quote" id="fabQuote" aria-label="Request Free Quotation">
+    <i class="fa-solid fa-file-invoice-dollar"></i>
+  </div>
+
+  <!-- Quote Modal -->
+  <div class="modal" id="quoteModal">
+    <div class="modal-content">
+      <button class="close-modal" id="closeModal">&times;</button>
+      <div class="modal-header">
+        <h2>Get Free Quotation</h2>
+        <p>Expert service in Mumbai Metropolitan Region</p>
+      </div>
+      <div class="modal-body">
+        <form class="hero-form" id="modalQuoteForm" method="POST" action="/submit-quote-mumbai">
+          <div class="form-group">
+            <label for="modalCustomerName">Full Name *</label>
+            <input type="text" id="modalCustomerName" name="name" placeholder="Enter your full name" required
+              autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="modalCustomerPhone">WhatsApp / Phone *</label>
+            <input type="tel" id="modalCustomerPhone" name="phone" placeholder="98765 43210" required
+              pattern="[0-9]{10}">
+          </div>
+          <div class="form-group">
+            <label for="modalMumbaiArea">Your Area in Mumbai *</label>
+            <select id="modalMumbaiArea" name="area" required>
+              <option value="">Select Your Area</option>
+              <optgroup label="South Mumbai">
+                <option value="colaba">Colaba</option>
+                <option value="andheri">Andheri</option>
+                <option value="bandra">Bandra</option>
+                <option value="borivali">Borivali</option>
+                <option value="thane">Thane</option>
+                <option value="vashi">Vashi</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="modalServiceType">Service Required *</label>
+            <select id="modalServiceType" name="service" required>
+              <option value="">Select Service</option>
+              <option value="tiles-marble">Tiles & Marble Flooring</option>
+              <option value="pop-ceiling">POP & False Ceiling</option>
+              <option value="furniture">Modular Furniture & Kitchen</option>
+              <option value="painting">Wall Painting</option>
+              <option value="complete-renovation">Complete Home Renovation</option>
+            </select>
+          </div>
+          <button type="submit" class="submit-btn">
+            <i class="fa-solid fa-paper-plane"></i>
+            Request Quote
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <script>
     // City Dropdown Logic
     const headerToggle = document.getElementById("headerCityToggle");
     const headerDropdown = document.getElementById("headerCityDropdown");
     const headerSelectedCity = document.getElementById("headerSelectedCity");
 
-    headerToggle.addEventListener("click", (e) => {
-      e.stopPropagation();
-      headerDropdown.style.display = headerDropdown.style.display === "block" ? "none" : "block";
-    });
+    if (headerToggle) {
+      headerToggle.addEventListener("click", (e) => {
+        e.stopPropagation();
+        headerDropdown.style.display = headerDropdown.style.display === "block" ? "none" : "block";
+      });
 
-    document.querySelectorAll(".city-option").forEach(city => {
-      city.addEventListener("click", () => {
-        headerSelectedCity.textContent = city.textContent;
+      document.querySelectorAll(".city-option").forEach(city => {
+        city.addEventListener("click", () => {
+          headerSelectedCity.textContent = city.textContent;
+          headerDropdown.style.display = "none";
+        });
+      });
+
+      document.addEventListener("click", () => {
         headerDropdown.style.display = "none";
       });
-    });
+    }
 
-    document.addEventListener("click", () => {
-      headerDropdown.style.display = "none";
+    // Modal Logic
+    const quoteModal = document.getElementById('quoteModal');
+    const fabQuote = document.getElementById('fabQuote');
+    const closeModal = document.getElementById('closeModal');
+
+    function openModal() {
+      quoteModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeQuoteModal() {
+      quoteModal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    if (fabQuote) fabQuote.addEventListener('click', openModal);
+    if (closeModal) closeModal.addEventListener('click', closeQuoteModal);
+
+    quoteModal.addEventListener('click', (e) => {
+      if (e.target === quoteModal) closeQuoteModal();
     });
 
     // Hero Slider Logic
@@ -1310,10 +1283,10 @@
 
     startAutoSlide();
 
-    // Quote Buttons Logic
+    // Quote Buttons Logic - Changed to open modal
     document.querySelectorAll('.quote-btn').forEach(btn => {
       btn.addEventListener('click', () => {
-        window.location.href = "tel:8303065367";
+        openModal();
       });
     });
 
